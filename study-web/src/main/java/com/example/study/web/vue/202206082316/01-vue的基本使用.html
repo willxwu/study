@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <title>vue的基本使用</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 模板语法--插值{{}} -->
+        <!-- 优先加载template里面的内容，如果为空也加载#app，在加载#app -->
+        <h1>{{msg}}</h1>
+    </div>
+
+    <script type="text/javascript" src="./node_modules/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+        new Vue({
+            el: '#app',
+            data: {
+                msg: '黄瓜'
+            },
+            template: '<div><h5>{{msg}}</h5></div>'
+        });
+    </script>
+</body>
+</html>

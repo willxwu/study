@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <title>vue指令</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+        .active{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">{{msg}}</div>
+    
+    <script type="text/javascript" src="./node_modules/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+    var vm = new Vue({
+        el: "#app",
+        data:function(){
+            return{
+                msg: 'vue指令',
+                msg2: 'vue的3种{{}}插值，1、{{}} 2、v-text="" 3\v-html=""',
+                isShow: true,
+                isActive: true,
+                frut: [
+                    {id:1,name:"苹果",price:20},
+                    {id:2,name:"火龙果",price:40},
+                    {id:3,name:"西瓜",price:30},
+                    {id:4,name:"荔枝",price:60}
+                ],
+                person:{
+                    name:"zhangsan",
+                    age:30,
+                    sex:"boy"
+                }
+            }
+        },
+        template: '<div>{{msg}} <p v-text="msg"></p> <p v-html="msg2"></p> <div v-if="isShow">v-if的使用</div> <div v-if="Math.random()>0.5">显示</div><div v-else>隐藏</div> <div v-show="true">v-show显示</div> <div class="box" v-on:click="clickHander" v-bind:class="{active:isActive}"></div> <ul><li v-for="(item,index) in frut"><h1>{{index}}</h1><h3>{{item.id}}</h3><h2>{{item.name}}</h2><h1>{{item.price}}</h1></li></ul> <ul><li v-for="(value,key) in person">{{value}}==={{key}}</li></ul>  </div>',
+        methods:{
+            clickHander(e){
+                console.log(this);
+                
+                this.isActive=!this.isActive;
+            }
+        }
+    
+    });
+    console.log(vm);
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+    <title>vue全局组件的创建</title>
+    <style>
+        .buttons{
+            display: inline-block;
+            line-height: 1;
+            white-space: nowrap;
+            cursor: pointer;
+            background: #fff;
+            border: 1px solid #dcdfe6;
+            color: #606266;
+            -webkit-appearance: none;
+            text-align: center;
+            box-sizing: border-box;
+            outline: none;
+            margin: 0;
+            transition: .1s;
+            font-weight: 500;
+            padding: 12px 20px;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+        .successs{
+            color: #fff;
+            background-color: #67c23a;
+            border-color: #67c23a;
+        }
+        .defaults{
+            color: #fff;
+            background-color: #409eff;
+            border-color: #409eff;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/javascript" src="./node_modules/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+    Vue.component('Vquanju',{
+        data(){
+            return{
+
+            }
+        },
+        template:'<div><button class="buttons" :class="type">全局组件按钮<slot></slot></button></div>',
+        props:['type']
+    });
+    //利用父向子传值，自己封装组件，例如按钮
+    var Vjubu={
+        data(){
+            return{
+
+            }
+        },
+        template:'<div><h2>我是局部组件  </h2><Vquanju>slot覆盖内容</Vquanju>  <Vquanju type="successs">默认</Vquanju > <Vquanju type="defaults">成功</Vquanju></div>',
+        
+    }
+
+    var Vju={
+        data(){
+            return{
+
+            }
+        },
+        template:'<div><h2>我是局部组件2</h2><Vquanju/></div>'
+    }
+
+    new Vue({
+        el: "#app",
+        data(){
+            return {
+
+            }
+        },
+        template: '<div><Vjubu/><Vju/></div>',
+        components:{
+            Vjubu,
+            Vju
+        }
+    });
+    </script>
+</body>
+</html>

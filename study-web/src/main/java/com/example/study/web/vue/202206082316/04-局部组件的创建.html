@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <title>vue局部组件的创建</title>
+</head>
+<body>
+    <div id="app"><h1>{{msg}}</h1></div>
+    <script type="text/javascript" src="./node_modules/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+
+    var App={
+        data(){
+            return {
+                
+            }
+        },
+        template:'<div>VUE  Hello </div>'
+    }
+
+    new Vue({
+        el:"#app",
+        data(){
+            return{
+                msg:"Hello  ---- World"
+            }
+        },
+        template:'<App/>',
+        methods:{
+           
+        },
+        components:{
+            App
+        }
+    });
+</script>
+</body>
+</html>

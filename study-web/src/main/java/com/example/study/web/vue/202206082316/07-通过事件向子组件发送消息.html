@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <title>通过prop往子组件通信</title>
+</head>
+    <div id="app">{{msg}}</div>
+
+    <script type="text/javascript" src="./node_modules/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+    
+    Vue.component('Vchild',{
+        data(){
+            return{
+                newData: ''
+            }
+        },
+        template:'<div><p>我是子组件{{childData}}<p/><input type="text" v-model="newData" @input="changeValue(newData)" /></div>',
+        props:['childData'],
+        methods:{
+            changeValue(val){
+                this.$emit('childHandler',val);
+            }
+        }
+    });
+
+
+    Vue.component('Vparent',{
+        data(){
+            return{
+                bmsg: 'Hello,绑定数据'
+            }
+        },
+        template:'<div><p>我是父组件</p><Vchild :childData="bmsg" @childHandler="childHandler"/></div>',
+        methods:{
+            childHandler(val){
+                console.log(val+"-------------------")
+            }
+        }
+    });
+
+    var App={
+        data(){
+            return{
+
+            }
+        },
+        template:'<h1><Vparent/></h1>'
+    }
+
+    new Vue({
+        el: '#app',
+        data(){
+            return{
+                msg: '好罗'
+            }
+        },
+        components:{
+            App
+        },
+        template:'<App/>'
+    });
+
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <title>vue全局组件的创建</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/javascript" src="./node_modules/vue/dist/vue.js"></script>
+    <script type="text/javascript">
+    Vue.component('Vquanju',{
+        data(){
+            return{
+
+            }
+        },
+        template:'<div><button>全局组件按钮</button></div>'
+    });
+    
+    var Vjubu={
+        data(){
+            return{
+
+            }
+        },
+        template:'<div><h2>我是局部组件</h2><Vquanju/></div>'
+    }
+
+    var Vju={
+        data(){
+            return{
+
+            }
+        },
+        template:'<div><h2>我是局部组件2</h2><Vquanju/></div>'
+    }
+
+    new Vue({
+        el: "#app",
+        data(){
+            return {
+
+            }
+        },
+        template: '<div><Vjubu/><Vju/></div>',
+        components:{
+            Vjubu,
+            Vju
+        }
+    });
+    </script>
+</body>
+</html>
