@@ -1,4 +1,4 @@
-package com.example.study.java8.InterfaceFunction;
+package com.example.study.java8.function;
 
 /**
  * lambda表达式 作用范围，注意事项

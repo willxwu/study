@@ -1,4 +1,4 @@
-package com.example.study.java8.InterfaceFunction;
+package com.example.study.java8.function;
 
 /**
  * 函数式接口

@@ -1,4 +1,4 @@
-package com.example.study.java8.InterfaceFunction;
+package com.example.study.java8.function;
 
 /**
  * 自定义多个参数函数接口，创建对象

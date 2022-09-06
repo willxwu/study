@@ -1,4 +1,4 @@
-package com.example.study.java8.InterfaceFunction;
+package com.example.study.java8.function;
 
 import java.util.Arrays;
 import java.util.Comparator;
