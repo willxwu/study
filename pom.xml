@@ -15,6 +15,7 @@
         <module>study-common</module>
         <module>study-web</module>
         <module>study-concurrency</module>
+        <module>study-java8</module>
     </modules>
 
 </project>
