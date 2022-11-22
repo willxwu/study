@@ -60,14 +60,19 @@ public class CompletableFutureAtion1 {
                 .thenCombine(CompletableFuture.supplyAsync(()->0.2),(v1,v2)->v1+v2)
                 .thenAccept(System.out::println);*/
 
-        //API-7、thenAcceptBoth:将异步产生的结果，与另一个CompletableFuture结果，作为参数进行处理，没有返回值，直接用于消费。
+
+
+
+/*        //API-7、thenAcceptBoth:将异步产生的结果，与另一个CompletableFuture结果，作为参数进行处理，没有返回值，直接用于消费。
         CompletableFuture.supplyAsync(() -> 1)
                 .thenAcceptBoth(CompletableFuture.supplyAsync(()->0.5), (v1,v2)->{
                     System.out.println(v1);
                     System.out.println(v2);
                 });
 
-//        thenCombine  VS thenAcceptBoth：2个方法类似，有个有返回值，有个没有返回值。
+//        thenCombine  VS thenAcceptBoth：2个方法类似，有个有返回值，有个没有返回值。*/
+
+
 
 
 
