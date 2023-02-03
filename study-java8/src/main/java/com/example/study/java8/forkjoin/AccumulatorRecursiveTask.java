@@ -33,8 +33,8 @@ public class AccumulatorRecursiveTask extends RecursiveTask<Integer> {
         }
 
         int mid = (start+end)/2;
-        AccumulatorRecursiveTask left = new AccumulatorRecursiveTask(start,mid,data);
         AccumulatorRecursiveTask right = new AccumulatorRecursiveTask(mid,end,data);
+        AccumulatorRecursiveTask left = new AccumulatorRecursiveTask(start,mid,data);
 
         left.fork();
         Integer rightResult = right.compute();
