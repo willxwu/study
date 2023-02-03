@@ -9,7 +9,6 @@ import java.util.concurrent.RecursiveTask;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 public class AccumulatorRecursiveTask extends RecursiveTask<Integer> {
     private  int start;
     private  int end;
