@@ -12,17 +12,17 @@ public class LambdaParameter {
             public void run() {
                 //i会报错提示：
                 //Variable 'i' is accessed from within inner class, needs to be final or effectively final
-               i++;
+//               i++;
             }
         };
-        i++;
+//        i++;
 
         //Lambda表达式
         Runnable runnable1 = ()->{
             //i同样报错提示：
             //Variable used in lambda expression should be final or effectively final
-           System.out.println(i);
+//           System.out.println(i);
         };
-        i++;
+//        i++;
     }
 }

@@ -5,14 +5,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.3</version>
+        <version>2.2.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example.study</groupId>
-    <artifactId>study-java8</artifactId>
+    <artifactId>study-id</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>study-java8</name>
-    <description>jdk1.8新特性</description>
+    <name>study-id</name>
+    <description>Study id project for Spring Boot</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -23,18 +23,14 @@
         </dependency>
 
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+            <artifactId>leaf-boot-starter</artifactId>
+            <groupId>com.sankuai.inf.leaf</groupId>
+            <version>1.0.1-RELEASE</version>
         </dependency>
     </dependencies>
 
@@ -43,14 +39,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
             </plugin>
         </plugins>
     </build>

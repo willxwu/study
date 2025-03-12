@@ -16,6 +16,7 @@
         <module>study-web</module>
         <module>study-concurrency</module>
         <module>study-java8</module>
+        <module>study-vip</module>
     </modules>
 
 </project>
