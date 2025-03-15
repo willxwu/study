@@ -1,4 +1,4 @@
-package com.example.study.vip.com.example.study.vip.entity;
+package com.example.study.vip.classAnnotation.annotation;
 
 import java.lang.annotation.*;
 

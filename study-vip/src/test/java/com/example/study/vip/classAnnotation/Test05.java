@@ -1,11 +1,11 @@
-package com.example.study.vip;
+package com.example.study.vip.classAnnotation;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class Test05 {
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchFieldException, NoSuchMethodException, InvocationTargetException {
-        Class<?> aClass = Class.forName("com.example.study.vip.com.example.study.vip.entity.UserEntity");
+        Class<?> aClass = Class.forName("com.example.study.vip.classAnnotation.entity.UserEntity");
         Object o = aClass.newInstance();
         Method count = aClass.getDeclaredMethod("count", String.class, Integer.class);
         count.setAccessible(true);

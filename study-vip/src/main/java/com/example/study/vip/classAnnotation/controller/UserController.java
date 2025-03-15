@@ -1,7 +1,6 @@
-package com.example.study.vip;
+package com.example.study.vip.classAnnotation.controller;
 
-import com.example.study.vip.com.example.study.vip.entity.MyAnnotation;
-import com.google.common.util.concurrent.RateLimiter;
+import com.example.study.vip.classAnnotation.annotation.MyAnnotation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

@@ -1,4 +1,6 @@
-package com.example.study.vip.com.example.study.vip.entity;
+package com.example.study.vip.classAnnotation.entity;
+
+import com.example.study.vip.classAnnotation.annotation.MyAnnotation;
 
 public class UserEntity {
 

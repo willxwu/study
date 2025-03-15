@@ -1,4 +1,4 @@
-package com.example.study.vip;
+package com.example.study.vip.classAnnotation;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

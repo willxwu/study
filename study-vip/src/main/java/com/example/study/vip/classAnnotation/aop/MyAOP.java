@@ -1,8 +1,7 @@
-package com.example.study.vip.com.example.study.vip.entity;
+package com.example.study.vip.classAnnotation.aop;
 
+import com.example.study.vip.classAnnotation.annotation.MyAnnotation;
 import com.google.common.util.concurrent.RateLimiter;
-import jdk.jshell.MethodSnippet;
-import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.After;
@@ -12,7 +11,6 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 
-import java.lang.reflect.Method;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Component
@@ -21,17 +19,17 @@ public class MyAOP {
 
     private ConcurrentHashMap<String, RateLimiter> ratelimiters = new ConcurrentHashMap<String, RateLimiter>();
 
-    @Before(value="@annotation(com.example.study.vip.com.example.study.vip.entity.MyAnnotation)")
+    @Before(value="@annotation(com.example.study.vip.classAnnotation.annotation.MyAnnotation)")
     public void Before(){
         System.out.println("前置通知");
     }
 
-    @After(value = "@annotation(com.example.study.vip.com.example.study.vip.entity.MyAnnotation)")
+    @After(value = "@annotation(com.example.study.vip.classAnnotation.annotation.MyAnnotation)")
     public void agter(){
         System.out.println("后置通知");
     }
 
-    @Around(value = "@annotation(com.example.study.vip.com.example.study.vip.entity.MyAnnotation)")
+    @Around(value = "@annotation(com.example.study.vip.classAnnotation.annotation.MyAnnotation)")
     public Object around(ProceedingJoinPoint joinPoint){
         try {
             Signature signature = joinPoint.getSignature();

@@ -1,14 +1,12 @@
-package com.example.study.vip;
+package com.example.study.vip.classAnnotation;
 
-import com.example.study.vip.com.example.study.vip.entity.UserEntity;
-import org.apache.catalina.User;
+import com.example.study.vip.classAnnotation.entity.UserEntity;
 
-import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 
 public class Test02 {
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchFieldException, NoSuchMethodException {
-        Class<?> aClass = Class.forName("com.example.study.vip.com.example.study.vip.entity.UserEntity");
+        Class<?> aClass = Class.forName("com.example.study.vip.classAnnotation.entity.UserEntity");
         UserEntity userEntity = (UserEntity) aClass.newInstance();
 
         Field field = aClass.getDeclaredField("address");
